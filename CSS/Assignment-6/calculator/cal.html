@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CSS Calculator (HTML + CSS)</title>
+<style>
+  :root{
+    --bg: #efeef6;             
+    --calc-bg: #2f3336;   
+    --display-bg: rgba(255,255,255,0.04);
+    --light-btn: #dfe6ea;    
+    --num-btn: #454a4d;      
+    --op-btn: #ff944d;        
+    --text-light: #eef2f3;
+    --text-dark: #222;
+    --shadow: 0 12px 30px rgba(15,20,25,0.25);
+    --inner-shadow: inset 0 -3px 8px rgba(0,0,0,0.35);
+    --radius: 18px;
+    font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    background: linear-gradient(180deg, #f3eefb 0%, var(--bg) 100%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:32px;
+  }
+
+  /* Calculator card */
+  .calculator {
+    width: min(320px, 86vw);
+    max-width: 340px;
+    aspect-ratio: 8 / 14; /* keeps proportions similar to photo */
+    background: linear-gradient(180deg, #333638 0%, #2b2f31 100%);
+    border-radius: calc(var(--radius) + 6px);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    color: var(--text-light);
+  }
+
+  
+  .display {
+    height: 72px;
+    border-radius: 12px;
+    background: var(--display-bg);
+    display:flex;
+    align-items:center;
+    justify-content: flex-end;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-light);
+    letter-spacing: 0.6px;
+    box-shadow: var(--inner-shadow);
+  }
+
+  
+  .keys {
+    display: grid;
+    gap: 12px;
+    
+    grid-template-columns: 1fr 1fr 1fr 0.95fr;
+    align-items: stretch;
+    flex:1;
+  }
+
+  
+  .btn {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  }
+
+  
+  .btn.light {
+    background: var(--light-btn);
+    color: var(--text-dark);
+    font-weight:700;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+
+  
+  .btn.num {
+    background: var(--num-btn);
+    color: var(--text-light);
+    font-size: 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.22);
+  }
+
+  .btn.op {
+    background: var(--op-btn);
+    color: #fff;
+    font-weight:700;
+    box-shadow: 0 8px 18px rgba(255,148,77,0.18);
+  }
+
+
+  .zero {
+    grid-column: 1 / span 2;
+    border-radius: 10px;
+    padding-left: 22px;
+    justify-content: flex-start;
+  }
+
+
+  .zero .btn-inner { font-size: 18px; }
+
+
+  .btn.op:first-child { border-top-right-radius: 10px; }
+  .btn.op:last-child { border-bottom-right-radius: 10px; }
+
+
+  @media (max-width: 360px){
+    .display { font-size: 24px; height:66px; }
+    .btn { padding: 10px; font-size: 16px; }
+  }
+
+
+  .display::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+    pointer-events:none;
+    opacity: 0; 
+  }
+
+
+  .caption {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    font-size: 13px;
+    color: rgba(12,12,12,0.35);
+  }
+</style>
+</head>
+<body>
+
+  <main class="calculator" role="application" aria-label="Static CSS calculator">
+    <div class="display" aria-hidden="true">
+      0
+    </div>
+
+    <div class="keys" role="grid" aria-hidden="true">
+      
+      <button class="btn light" type="button">AC</button>
+      <button class="btn light" type="button">±</button>
+      <button class="btn light" type="button">%</button>
+      <button class="btn op" type="button">÷</button>
+
+    
+      <button class="btn num" type="button">7</button>
+      <button class="btn num" type="button">8</button>
+      <button class="btn num" type="button">9</button>
+      <button class="btn op" type="button">×</button>
+
+      
+      <button class="btn num" type="button">4</button>
+      <button class="btn num" type="button">5</button>
+      <button class="btn num" type="button">6</button>
+      <button class="btn op" type="button">−</button>
+
+      
+      <button class="btn num" type="button">1</button>
+      <button class="btn num" type="button">2</button>
+      <button class="btn num" type="button">3</button>
+      <button class="btn op" type="button">+</button>
+
+      
+      <div class="zero" style="display:flex;">
+        <button class="btn num" style="width:100%; border-radius:10px;" type="button">0</button>
+      </div>
+      <button class="btn num" type="button">.</button>
+      <button class="btn op" type="button">=</button>
+    </div>
+
+    <div class="caption">Kunal</div>
+  </main>
+
+</body>
+</html>
