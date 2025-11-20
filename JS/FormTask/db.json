@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "test@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "0a0d",
+      "email": "agrawalkartik100@gmail.comXML",
+      "phone_number": "7017441970",
+      "password": "Kartik@100"
+    },
+    {
+      "id": "eee9",
+      "name": "Kartik Agrawal",
+      "email": "agrawalkartik100@gmail.comAXIOS",
+      "phone": "7017441970",
+      "country": "india",
+      "gender": "male",
+      "password": "Kartik1234$"
+    },
+    {
+      "id": "dd92",
+      "name": "Kartik Agrawal",
+      "email": "agrawalkartik100@gmail.comFetchAPI",
+      "phone": "7017441970",
+      "country": "india",
+      "gender": "male",
+      "password": "Kartik@100"
+    },
+    {
+      "id": "cc49",
+      "name": "Kartik Agrawal",
+      "email": "agrawalkartik100@gmail.comQuery",
+      "phone": "7017441970",
+      "country": "india",
+      "gender": "male",
+      "password": "Kartik@100"
+    }
+  ]
+}

@@ -12,11 +12,11 @@ class Product {
         return `ID: ${this.id}, Name: ${this.name}, Price: ${this.price}, Category: ${this.category}`;
     }
 }
-
+     
 const products = [
     new Product(1, "Laptop", 55000, "Electronics"),
     new Product(2, "Shoes", 900, "Fashion"),
-    new Product(3, "Phone", 12000, "Electronics")
+    new Product(3, "Phone", 12000, "Electronics")       
 ];
 
 products.forEach(p => p.applyDiscount(10));
