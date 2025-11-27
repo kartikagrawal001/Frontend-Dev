@@ -1,0 +1,53 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Kartik Agrawal",
+      "section": "CB",
+      "marks": "92",
+      "grade": "A"
+    },
+    {
+      "id": "bcc0",
+      "name": "Abhishek Singh",
+      "section": "CB",
+      "marks": "100",
+      "grade": "O"
+    },
+    {
+      "id": "78db",
+      "name": "Mainsh",
+      "section": "CB",
+      "marks": "76",
+      "grade": "B"
+    },
+    {
+      "id": "9401",
+      "name": "Priyanshu",
+      "section": "CB",
+      "marks": "99",
+      "grade": "A"
+    },
+    {
+      "id": "188c",
+      "name": "Aman",
+      "section": "CB",
+      "marks": "80",
+      "grade": "B"
+    },
+    {
+      "id": "3ad1",
+      "name": "Afzal",
+      "section": "CB",
+      "marks": "76",
+      "grade": "A"
+    },
+    {
+      "id": "2d69",
+      "name": "perth",
+      "section": "CB",
+      "marks": "45",
+      "grade": "O"
+    }
+  ]
+}

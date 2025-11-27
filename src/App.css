@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+/* ===== Global Styling ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2 {
+  font-weight: 600;
+  color: #222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ===== Container ===== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* ===== Header Styling ===== */
+.header-title {
+  font-size: 32px;
+  border-left: 6px solid #4a90e2;
+  padding-left: 12px;
+  margin-bottom: 25px;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 6px 14px;
+  margin: 4px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-edit {
+  background-color: #00a86b;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-delete {
+  background-color: #e63946;
+  color: white;
+}
+
+.btn-view {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+/* ===== Search Box ===== */
+input[type="text"] {
+  padding: 8px 12px;
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+}
+
+/* ===== Table Styling ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  text-align: left;
+}
+
+table td {
+  padding: 12px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover td {
+  background-color: #f1f5ff;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.active-page {
+  background-color: #4a90e2 !important;
+  color: white;
+}
+
+/* ===== Card for Details Page ===== */
+.student-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.student-card h2 {
+  margin-bottom: 20px;
+  border-left: 5px solid #4a90e2;
+  padding-left: 10px;
+}
+
+/* ===== Form Styling ===== */
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+form input:focus {
+  border-color: #4a90e2;
+}
+
+/* Submit button */
+form button {
+  width: 100%;
+  margin-top: 20px;
 }
